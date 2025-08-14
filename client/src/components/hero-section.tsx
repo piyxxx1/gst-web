@@ -78,8 +78,11 @@ export default function HeroSection() {
                 size="lg" 
                 className="border-white text-gray-900 hover:bg-white hover:text-gray-900 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold transition-all duration-300"
                 data-testid="hero-cta-secondary"
+                asChild
               >
-                Learn More
+                <a href="/contact">
+                  Learn More
+                </a>
               </Button>
             </div>
           </div>

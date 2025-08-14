@@ -89,12 +89,11 @@ export default function TaxAudit() {
                 Comprehensive tax audit services to ensure compliance with Income Tax Act. Get expert audit reports and avoid penalties with professional tax audit services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[#F7941D] hover:bg-[#e8851a] text-white font-semibold px-8 py-4">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Started Now
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4">
-                  Download Guide
+                <Button size="lg" className="bg-[#F7941D] hover:bg-[#e8851a] text-white font-semibold px-8 py-4" asChild>
+                  <a href="tel:+91-9471064950">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Get Started Now
+                  </a>
                 </Button>
               </div>
             </div>
