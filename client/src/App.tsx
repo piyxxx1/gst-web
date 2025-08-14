@@ -3,76 +3,77 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { lazy, Suspense } from "react";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
+import NotFound from "@/pages/not-found";
 
-// Registration Services
-import PrivateLimited from "@/pages/services/private-limited";
-import LlpRegistration from "@/pages/services/llp-registration";
-import PartnershipFirmRegistration from "@/pages/services/partnership-firm-registration";
-import NGORegistration from "@/pages/services/ngo-registration";
-import SoleProprietorshipRegistration from "@/pages/services/sole-proprietorship-registration";
-import StartupIndiaRegistration from "@/pages/services/startup-india-registration";
+// Lazy load service pages
+const PrivateLimited = lazy(() => import("@/pages/services/private-limited"));
+const LlpRegistration = lazy(() => import("@/pages/services/llp-registration"));
+const PartnershipFirmRegistration = lazy(() => import("@/pages/services/partnership-firm-registration"));
+const NGORegistration = lazy(() => import("@/pages/services/ngo-registration"));
+const SoleProprietorshipRegistration = lazy(() => import("@/pages/services/sole-proprietorship-registration"));
+const StartupIndiaRegistration = lazy(() => import("@/pages/services/startup-india-registration"));
 
 // New Company Registration Services
-import NidhiCompany from "@/pages/services/nidhi-company";
-import OnePersonCompany from "@/pages/services/one-person-company";
-import Section8Company from "@/pages/services/section-8-company";
-import ProducerCompany from "@/pages/services/producer-company";
+const NidhiCompany = lazy(() => import("@/pages/services/nidhi-company"));
+const OnePersonCompany = lazy(() => import("@/pages/services/one-person-company"));
+const Section8Company = lazy(() => import("@/pages/services/section-8-company"));
+const ProducerCompany = lazy(() => import("@/pages/services/producer-company"));
 
 // Compliance Services
-import ROCCompliance from "@/pages/services/roc-compliance";
-import ROCFiling from "@/pages/services/roc-filing";
-import GSTFiling from "@/pages/services/gst-filing";
-import IncomeTaxFiling from "@/pages/services/income-tax-filing";
-import LegalCompliance from "@/pages/services/legal-compliance";
-import CorporateGovernance from "@/pages/services/corporate-governance";
-import AuditServices from "@/pages/services/audit-services";
+const ROCCompliance = lazy(() => import("@/pages/services/roc-compliance"));
+const ROCFiling = lazy(() => import("@/pages/services/roc-filing"));
+const GSTFiling = lazy(() => import("@/pages/services/gst-filing"));
+const IncomeTaxFiling = lazy(() => import("@/pages/services/income-tax-filing"));
+const LegalCompliance = lazy(() => import("@/pages/services/legal-compliance"));
+const CorporateGovernance = lazy(() => import("@/pages/services/corporate-governance"));
+const AuditServices = lazy(() => import("@/pages/services/audit-services"));
 
 // IPR Services
-import PatentRegistration from "@/pages/services/patent-registration";
-import CopyrightRegistration from "@/pages/services/copyright-registration";
-import DesignRegistration from "@/pages/services/design-registration";
-import InternationalIPProtection from "@/pages/services/international-ip-protection";
-import IPLitigationSupport from "@/pages/services/ip-litigation-support";
+const PatentRegistration = lazy(() => import("@/pages/services/patent-registration"));
+const CopyrightRegistration = lazy(() => import("@/pages/services/copyright-registration"));
+const DesignRegistration = lazy(() => import("@/pages/services/design-registration"));
+const InternationalIPProtection = lazy(() => import("@/pages/services/international-ip-protection"));
+const IPLitigationSupport = lazy(() => import("@/pages/services/ip-litigation-support"));
 
 // Taxation Services
-import TaxPlanning from "@/pages/services/tax-planning";
-import TDSReturnFiling from "@/pages/services/tds-return-filing";
-import TaxAudit from "@/pages/services/tax-audit";
-import InternationalTaxation from "@/pages/services/international-taxation";
-import TransferPricing from "@/pages/services/transfer-pricing";
+const TaxPlanning = lazy(() => import("@/pages/services/tax-planning"));
+const TDSReturnFiling = lazy(() => import("@/pages/services/tds-return-filing"));
+const TaxAudit = lazy(() => import("@/pages/services/tax-audit"));
+const InternationalTaxation = lazy(() => import("@/pages/services/international-taxation"));
+const TransferPricing = lazy(() => import("@/pages/services/transfer-pricing"));
 
 // Consultation Services
-import BusinessConsultation from "@/pages/services/business-consultation";
-import LegalConsultation from "@/pages/services/legal-consultation";
-import FinancialConsultation from "@/pages/services/financial-consultation";
-import ComplianceConsultation from "@/pages/services/compliance-consultation";
-import StartupConsultation from "@/pages/services/startup-consultation";
-import CorporateConsultation from "@/pages/services/corporate-consultation";
+const BusinessConsultation = lazy(() => import("@/pages/services/business-consultation"));
+const LegalConsultation = lazy(() => import("@/pages/services/legal-consultation"));
+const FinancialConsultation = lazy(() => import("@/pages/services/financial-consultation"));
+const ComplianceConsultation = lazy(() => import("@/pages/services/compliance-consultation"));
+const StartupConsultation = lazy(() => import("@/pages/services/startup-consultation"));
+const CorporateConsultation = lazy(() => import("@/pages/services/corporate-consultation"));
 
 // Additional Services
-import FssaiRegistration from "@/pages/services/fssai-registration";
-import ImportExportCode from "@/pages/services/import-export-code";
-import MsmeRegistration from "@/pages/services/msme-registration";
+const FssaiRegistration = lazy(() => import("@/pages/services/fssai-registration"));
+const ImportExportCode = lazy(() => import("@/pages/services/import-export-code"));
+const MsmeRegistration = lazy(() => import("@/pages/services/msme-registration"));
 
 // New Business Services
-import TradeLicense from "@/pages/services/trade-license";
-import TrademarkObjectionReply from "@/pages/services/trademark-objection-reply";
-import AccountingBookkeeping from "@/pages/services/accounting-bookkeeping";
-import VirtualCFO from "@/pages/services/virtual-cfo";
-import LegalDrafting from "@/pages/services/legal-drafting";
+const TradeLicense = lazy(() => import("@/pages/services/trade-license"));
+const TrademarkObjectionReply = lazy(() => import("@/pages/services/trademark-objection-reply"));
+const AccountingBookkeeping = lazy(() => import("@/pages/services/accounting-bookkeeping"));
+const VirtualCFO = lazy(() => import("@/pages/services/virtual-cfo"));
+const LegalDrafting = lazy(() => import("@/pages/services/legal-drafting"));
 
 // Existing Services
-import GstRegistration from "@/pages/services/gst-registration";
-import TrademarkRegistration from "@/pages/services/trademark-registration";
+const GstRegistration = lazy(() => import("@/pages/services/gst-registration"));
+const TrademarkRegistration = lazy(() => import("@/pages/services/trademark-registration"));
 
 // Legal Pages
-import Terms from "@/pages/legal/terms";
-import Privacy from "@/pages/legal/privacy";
-import Disclaimer from "@/pages/legal/disclaimer";
-import NotFound from "@/pages/not-found";
+const Terms = lazy(() => import("@/pages/legal/terms"));
+const Privacy = lazy(() => import("@/pages/legal/privacy"));
+const Disclaimer = lazy(() => import("@/pages/legal/disclaimer"));
 
 function Router() {
   return (
@@ -151,12 +152,23 @@ function Router() {
   );
 }
 
+// Loading component for lazy-loaded routes
+function LoadingSpinner() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Router />
+        </Suspense>
       </TooltipProvider>
     </QueryClientProvider>
   );

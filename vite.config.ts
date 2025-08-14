@@ -27,6 +27,41 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@tanstack')) {
+              return 'vendor-tanstack';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-lucide';
+            }
+            return 'vendor';
+          }
+          
+          // UI components chunk
+          if (id.includes('@/components/ui')) {
+            return 'ui-components';
+          }
+          
+          // Service pages chunk
+          if (id.includes('@/pages/services')) {
+            return 'service-pages';
+          }
+          
+          // Legal pages chunk
+          if (id.includes('@/pages/legal')) {
+            return 'legal-pages';
+          }
+        }
+      }
+    }
   },
   server: {
     fs: {
