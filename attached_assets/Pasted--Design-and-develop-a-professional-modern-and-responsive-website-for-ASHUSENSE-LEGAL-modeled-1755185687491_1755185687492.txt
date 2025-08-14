@@ -1,0 +1,144 @@
+
+Design and develop a professional, modern, and responsive website for **ASHUSENSE LEGAL**, modeled closely after the structure, layout, and functionality of [www.registerkaro.in](https://www.registerkaro.in).
+
+---
+
+### 🔹**Company Description (To be placed on About section):**
+
+> **ASHUSENSE LEGAL** is a renowned group of individual professionals that has established itself as a market leader in guiding corporate houses and entrepreneurs. We specialize in **Company Incorporation, Taxation, and other professional services**.
+>
+> We offer tailored consultation services to entrepreneurs and start-ups, ensuring guaranteed and satisfactory results.
+>
+> Our network consists of independent professionals; no member firm has authority to bind or obligate ASHUSENSE LEGAL or vice versa. Clients voluntarily post their legal and business queries, and select from qualified professionals listed on our platform.
+>
+> We do not advertise or solicit services – our clients come to us for reliable, high-quality expertise.
+
+---
+
+### 🧱 **Core Website Structure & Features:**
+
+#### 1. **Homepage**
+
+* Clean, modern hero banner with a bold headline and CTA
+* Short description of services
+* Client trust indicators (e.g., "Trusted by 1000+ Startups")
+* Featured services with icons
+* Testimonials
+* Why Choose Us section
+* CTA (e.g., "Get Started", “Consult Now”)
+
+#### 2. **Navbar with Dropdowns**
+
+Include multiple dropdown sections in the main menu like:
+
+* **Company Registration**
+
+  * Private Limited Company
+  * LLP Registration
+  * One Person Company
+  * Section 8 Company
+  * Nidhi Company
+  * Producer Company
+
+* **Tax & Compliance**
+
+  * GST Registration
+  * GST Filing
+  * Income Tax Filing
+  * TDS Return Filing
+  * ROC Filing
+
+* **Licenses**
+
+  * FSSAI Registration
+  * Import Export Code
+  * Trade License
+  * MSME Registration
+
+* **Trademark & IP**
+
+  * Trademark Registration
+  * Trademark Objection Reply
+  * Patent Registration
+  * Copyright Registration
+
+* **Other Services**
+
+  * Accounting & Bookkeeping
+  * Virtual CFO
+  * Legal Drafting
+  * Business Consultation
+
+#### 3. **Subpages for Each Service**
+
+Each service should have its own dedicated SEO-optimized landing page with:
+
+* Overview
+* Benefits
+* Process
+* Required Documents
+* Pricing
+* FAQ section
+* CTA for inquiry or consultation
+
+#### 4. **Contact Page**
+
+* Contact form
+* Address, phone, email
+* Google map embed
+* Option to upload documents
+
+#### 5. **Chatbot Integration**
+
+* Integrate a live chatbot (e.g., Tawk.to, Crisp, or WhatsApp Chat)
+* Should offer: Initial query capture, basic FAQ, collect contact info
+
+#### 6. **Client Dashboard (Optional for Later)**
+
+* Client login area (for document sharing, status tracking, etc.)
+
+#### 7. **SEO & Speed Optimized**
+
+* Mobile responsive
+* Fast loading
+* On-page SEO
+* Schema markup
+* SSL secured
+
+#### 8. **Legal Pages**
+
+* Terms & Conditions
+* Privacy Policy
+* Disclaimer
+
+---
+
+### 🎨 Design & Style References:
+
+* Use modern flat design elements
+* Clean typography
+* Use color palette similar to RegisterKaro (white, blue, gray, with accent colors)
+* Icons for each service
+* Trust badges (e.g., ISO certified, Startup India)
+
+---
+
+### 🔧 Technical Requirements:
+
+* CMS preferred: WordPress, Webflow, or custom HTML (your choice)
+* Blog section for articles (for SEO)
+* Easy backend for content updates
+* Integrate basic analytics (Google Analytics)
+
+---
+
+### ✅ Final Deliverables:
+
+* Fully functional website
+* Mobile + tablet responsive design
+* SEO-ready pages
+* Integrated chatbot
+* Editable backend
+* User guide or admin tutorial  use online images also to make beautiful website 
+
+

@@ -1,0 +1,54 @@
+Here’s the **detailed AI prompt** you can give to an agent to recreate that **mobile view submenu design** you showed:
+
+---
+
+**Prompt:**
+"Create a mobile-friendly version of the navbar’s sub-section (dropdown menu) similar to the RegisterKaro mobile UI.
+
+**Requirements:**
+
+1. **Layout & Structure:**
+
+   * Full-height vertical sliding panel from the left or right when a main navbar item (e.g., 'Registrations') is clicked.
+   * The panel width should be around `85%` of the viewport width, with the remaining area dimmed for focus.
+   * Sticky top header inside the panel showing:
+
+     * A back arrow icon (`<`) on the left to return to the main menu.
+     * The section title in bold (e.g., 'Registrations') centered.
+
+2. **Content Style:**
+
+   * Each sub-section should have a **bold heading** (e.g., 'Company Registration').
+   * Below the heading, display a list of links (e.g., 'Private Limited Company Registration', 'LLP Registration', etc.)
+   * Use bullet points (`•`) or small icons before each item.
+   * Links should have no underline but change color slightly on hover/tap for visual feedback.
+
+3. **Typography & Colors:**
+
+   * Heading: font-weight bold, color `#1c2431`, slightly larger font size (\~1.1rem).
+   * List items: normal weight, color `#1c2431`, font size \~0.95rem.
+   * Background: white (`#fff`).
+   * Back arrow icon and title: dark navy (`#1c2431`).
+
+4. **Spacing & Dividers:**
+
+   * Use enough padding for touch targets: `padding: 0.75rem 1.25rem`.
+   * Add a subtle horizontal divider (`#e5e5e5`) between main groups.
+
+5. **Behavior:**
+
+   * Smooth slide-in animation (0.3s ease-in-out).
+   * Back arrow should close the sub-section and return to the main navbar list.
+   * The menu should be scrollable if the list exceeds the viewport height.
+
+6. **Extra Details:**
+
+   * At the bottom right corner, display a small floating circular support/expert image (as in the reference screenshot).
+   * Make it fully responsive for mobile devices (320px - 768px width).
+   * Ensure accessibility: proper ARIA roles for navigation menus.
+
+This should replicate the exact mobile sub-section style and behavior seen in the provided screenshot while keeping the UI clean and touch-friendly."
+
+---
+
+If you want, I can now **code this mobile view sub-section** so you can plug it directly into your navbar system. That way, it will match both desktop and mobile designs seamlessly.
